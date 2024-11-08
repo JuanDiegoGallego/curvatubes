@@ -380,7 +380,7 @@ def _generate_shape(v0, params, delta_x, xi, optim_method, optim_props,
     '''Save and show the results'''
     if nan_OK :
         E_curve = np.array(E_curve)      
-        slices(u.detach().cpu().numpy())
+        # slices(u.detach().cpu().numpy()) # MODIFICADO
         
         fig, ax = plt.subplots(2,2, figsize = (12,12))
 
@@ -401,7 +401,7 @@ def _generate_shape(v0, params, delta_x, xi, optim_method, optim_props,
         ax[1,1].set_title('mass_curve')
         
         fig.savefig(snapshot_folder + 'Curves/' + exp_title + title + ' curves.png')
-        plt.show()
+        #plt.show() MODIFICADO
         
         if False :
             fig, ax = plt.subplots(1,2, figsize = (12,6))
